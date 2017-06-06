@@ -20,7 +20,7 @@
         <open.care.core.version>1.0.0</open.care.core.version>
 
         <!-- 第三方jar的版本管理 -->
-        <spring.version>4.0.0.RELEASE</spring.version>
+        <spring.version>4.3.7.RELEASE</spring.version>
         <slite.dependencies.version>1.0.2</slite.dependencies.version>
         <servlet.api.version>3.1.0</servlet.api.version>
         <commons.lang.version>2.6</commons.lang.version>
