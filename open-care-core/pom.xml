@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sm</groupId>
     <artifactId>open-care-core</artifactId>
     <packaging>jar</packaging>
     <version>${open.care.core.version}</version>
