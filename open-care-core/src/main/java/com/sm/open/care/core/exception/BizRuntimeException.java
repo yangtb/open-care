@@ -1,5 +1,7 @@
 package com.sm.open.care.core.exception;
 
+import org.apache.commons.lang.StringUtils;
+
 public class BizRuntimeException extends RuntimeException {
 	private static final long serialVersionUID = 3064458242669384355L;
 
@@ -7,9 +9,17 @@ public class BizRuntimeException extends RuntimeException {
 	private final String msg;
 	private Throwable throwable;
 
+	public BizRuntimeException(String message){
+		this(StringUtils.EMPTY, message, null);
+	}
+
 	public BizRuntimeException(String errorCode, String msg) {
 		this.errorCode = errorCode;
 		this.msg = msg;
+	}
+
+	public BizRuntimeException(String message, Throwable throwable){
+		this(StringUtils.EMPTY, message, throwable);
 	}
 
 	public BizRuntimeException(String errorCode, String msg, Throwable throwable) {

@@ -5,6 +5,7 @@
 package com.sm.open.care.core.log;
 
 import com.alipay.common.tracer.util.TracerContextUtil;
+import com.sm.open.care.core.dubbo.TraceIdUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
@@ -122,7 +123,7 @@ public final class LoggerUtil {
      * @return
      */
     private static String getTraceId() {
-        String traceId = TracerContextUtil.getTraceId();
+        String traceId = TraceIdUtil.getLocalTraceid();
         if (StringUtils.isNotBlank(traceId)) {
             return traceId;
         }

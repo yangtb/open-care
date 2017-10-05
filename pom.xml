@@ -14,13 +14,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.6</java.version>
+        <java.version>1.7</java.version>
 
         <!-- 项目里的jar版本管理 -->
         <open.care.core.version>1.0.0</open.care.core.version>
 
         <!-- 第三方jar的版本管理 -->
-        <spring.version>4.3.7.RELEASE</spring.version>
+        <spring.version>4.3.0.RELEASE</spring.version>
         <slite.dependencies.version>1.0.2</slite.dependencies.version>
         <servlet.api.version>3.1.0</servlet.api.version>
         <commons.lang.version>2.6</commons.lang.version>
@@ -36,6 +36,7 @@
         <net.sf.cglib.version>2.1.3.alipay</net.sf.cglib.version>
         <commons.collections.version>3.2</commons.collections.version>
         <fastjson.version>1.2.7.sec01</fastjson.version>
+        <dubbo.version>2.5.3</dubbo.version>
         <!--
         <logback.core.version>1.1.7</logback.core.version>
         <logback.classic.version>1.1.7</logback.classic.version>
@@ -108,10 +109,33 @@
             </dependency>
 
             <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
