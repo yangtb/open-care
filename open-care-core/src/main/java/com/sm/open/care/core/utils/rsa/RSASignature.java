@@ -56,14 +56,10 @@ public class RSASignature {
 	}
 
 	/**
-	 * 
-	 * @Title:sign
-	 * @author：沈利松
-	 * @Description:签名（无编码入参）
-	 * @date:2016年11月8日 下午2:09:52
-	 * @parm:
-	 * @return:String
-	 * @throws
+	 * 签名（无编码入参）
+	 * @param content
+	 * @param privateKey
+	 * @return
 	 */
 	public static String sign(String content, String privateKey) {
 		try {
@@ -111,14 +107,11 @@ public class RSASignature {
 	}
 
 	/**
-	 *
-	 * @Title:doCheck
-	 * @author：沈利松
-	 * @Description:RSA验签名检查(无编码入参)
-	 * @date:2016年11月8日 下午2:12:32
-	 * @parm:
-	 * @return:boolean
-	 * @throws
+	 * RSA验签名检查(无编码入参)
+	 * @param content
+	 * @param sign
+	 * @param publicKey
+	 * @return
 	 */
 	public static boolean doCheck(String content, String sign, String publicKey) {
 		try {
