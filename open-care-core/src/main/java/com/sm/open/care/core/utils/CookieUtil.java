@@ -1,7 +1,8 @@
 package com.sm.open.care.core.utils;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ public class CookieUtil {
 
 	private static final String defaultDesKey = "g174f8jh45gg7tg";
 
-	private static final Logger logger = Logger.getLogger(CookieUtil.class);
+	private static final Logger logger = LoggerFactory.getLogger(CookieUtil.class);
 
 	public static void setCookie(HttpServletResponse response, String name,
 			String value, Boolean isRemmeber) {

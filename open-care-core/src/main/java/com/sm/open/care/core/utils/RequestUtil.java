@@ -1,7 +1,8 @@
 package com.sm.open.care.core.utils;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +14,7 @@ import java.util.Map;
  */
 public class RequestUtil {
 
-    private static final Logger LOGGER = Logger.getLogger(RequestUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestUtil.class);
 
     /**
      * 排序及拼接通用方法

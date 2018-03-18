@@ -1,7 +1,8 @@
 package com.sm.open.care.core.utils;
 
 import com.alibaba.fastjson.JSON;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -10,7 +11,7 @@ import java.util.Locale;
  * @Description: 拼音转换
  */
 public class TpinyinUtil {
-	private static final Logger logger = Logger.getLogger(TpinyinUtil.class);
+	private static final Logger logger = LoggerFactory.getLogger(TpinyinUtil.class);
 
 	/**
 	 * 文件复制功能

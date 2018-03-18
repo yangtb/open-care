@@ -2,7 +2,8 @@ package com.sm.open.care.core.utils;
 
 import net.sf.cglib.beans.BeanMap;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
@@ -16,7 +17,7 @@ import java.util.*;
  */
 public class MapUtil {
 	
-	private static final Logger logger = Logger.getLogger(MapUtil.class);
+	private static final Logger logger = LoggerFactory.getLogger(MapUtil.class);
 
 	private MapUtil() {
 

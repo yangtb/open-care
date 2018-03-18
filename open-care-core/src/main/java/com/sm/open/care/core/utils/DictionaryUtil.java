@@ -1,7 +1,8 @@
 package com.sm.open.care.core.utils;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Method;
 import java.util.LinkedHashMap;
@@ -12,7 +13,7 @@ import java.util.Map;
  */
 public class DictionaryUtil {
 
-    private static final Logger logger = Logger.getLogger(DictionaryUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(DictionaryUtil.class);
 
     public static final Map<String, String> getValueMap(final Class clazz) {
         Map<String, String> map = new LinkedHashMap<String, String>();
