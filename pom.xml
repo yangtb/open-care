@@ -36,7 +36,7 @@
         <commons.collections.version>3.2</commons.collections.version>
         <fastjson.version>1.2.7.sec01</fastjson.version>
         <dubbo.version>2.5.3</dubbo.version>
-        <log4j2.version>2.9.1</log4j2.version>
+        <log4j2.version>2.10.0</log4j2.version>
         <slf4j.version>1.7.25</slf4j.version>
         <disruptor.version>3.3.4</disruptor.version>
         <!--
@@ -44,6 +44,7 @@
         <logback.classic.version>1.1.7</logback.classic.version>
         -->
         <commons.email.version>1.3.2</commons.email.version>
+        <jxl.version>2.6.12</jxl.version>
     </properties>
 
     <dependencyManagement>
@@ -160,6 +161,7 @@
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-jcl</artifactId>
                 <version>${log4j2.version}</version>
+                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -177,6 +179,11 @@
                 <version>${disruptor.version}</version>
             </dependency>
             <!--log4j2日志配置 end-->
+            <dependency>
+                <groupId>net.sourceforge.jexcelapi</groupId>
+                <artifactId>jxl</artifactId>
+                <version>${jxl.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
