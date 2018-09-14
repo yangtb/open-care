@@ -5,10 +5,10 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 
 /**
- * @ClassName: TraceUtil
+ * @ClassName: TraceIdUtil
  * @Description: 生成traceid, 用于跟踪分布式服务的调用轨迹，任何要用traceid的地方，用此工具类获取
- * @Author: yangtb @hsyuntai.com
- * @Date: 2017 /6/21 13:58
+ * @Author yangtongbin
+ * @Date 2018/9/14 10:06
  */
 public class TraceIdUtil {
 

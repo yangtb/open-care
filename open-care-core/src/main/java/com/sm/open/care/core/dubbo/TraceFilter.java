@@ -12,9 +12,8 @@ import java.net.InetSocketAddress;
 /**
  * @ClassName: TraceFilter
  * @Description: 跟踪分布式dubbo服务的调用轨迹
- * @Author: denglt
- * @Author: yangtb@hsyuntai.com
- * @Date: 2017/6/22 12:50
+ * @Author yangtongbin
+ * @Date 2018/9/14 10:09
  */
 @Activate(group = {Constants.CONSUMER, Constants.PROVIDER})
 public class TraceFilter implements Filter {

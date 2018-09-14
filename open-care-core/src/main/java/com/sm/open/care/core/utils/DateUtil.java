@@ -261,8 +261,6 @@ public class DateUtil {
 	/**
 	 * 
 	 * @Description: 设置指定时间的天时分秒 正数+负数-
-	 * @Author: chenhu@hsyuntai.com
-	 * @Date: 2016年9月2日上午10:11:18
 	 * @param date  要修改的时间
 	 * @param day   天数
 	 * @param hour  小时
@@ -283,7 +281,6 @@ public class DateUtil {
 	/**
 	 * @Description: 获取当月的第一天
 	 * @return
-	 * @Author: liangqing@hundsun.com
 	 * @Date: 2016年3月6日 下午4:41:04
 	 */
 	public static String getFirstDatePerMonth() {
@@ -394,7 +391,6 @@ public class DateUtil {
 	 * 两个日期相减
 	 * 
 	 * @return
-	 * @Author: liangqing@hundsun.com
 	 * @Date: 2015年8月18日 下午7:10:28
 	 */
 	public static Long subDate(String dateStr1, String dateStr2) {
@@ -439,8 +435,6 @@ public class DateUtil {
 	/**
 	 * @Description: 获取两个日期直接的天数值
 	 * @Param:
-	 * @Return:
-	 * @Author: qiufeng@hsyuntai.com
 	 * @Date: 2017/4/7 11:15
 	 */
 	public static int daysBetween(Date smallDate, Date bigDate) {
@@ -702,10 +696,6 @@ public class DateUtil {
 
 	/**
 	 * @Description: 获取两个日期指定域的差值
-	 * @Param:
-	 * @Return:
-	 * @Author: qiufeng@hsyuntai.com
-	 * @Date: 2017/4/7 14:00
 	 */
 	public static int getLastMonthDays(Date date) {
 		Calendar calendar = DateUtils.toCalendar(date);
@@ -713,26 +703,10 @@ public class DateUtil {
 		return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 	}
 
-	/**
-	 * 备孕算法使用
-	 * @param date
-	 * @param d
-	 * @Author: liubc@hsyuntai.com
-	 * @return
-	 */
-	public static Date addMonth(Date date,Integer d){
-		Calendar c = Calendar.getInstance();
-		c.setTime(date);
-		c.add(Calendar.DATE, d);
-		date = c.getTime();
-		return date;
-	}
+
 
 	/**
 	 * @Description: 增加指定域的值
-	 * @Param:
-	 * @Return:
-	 * @Author: qiufeng@hsyuntai.com
 	 * @Date: 2017/4/12 14:35
 	 */
 	public static Date add(Date date, int field, int amount) {
@@ -746,9 +720,6 @@ public class DateUtil {
 
 	/**
 	 * @Description: 设置指定时间的时、分、秒、毫秒
-	 * @Param:
-	 * @Return:
-	 * @Author: qiufeng@hsyuntai.com
 	 * @Date: 2017/5/3 16:55
 	 */
 	public static Date setTime(Date date,int hour,int min,int sec,int millSec){
@@ -763,9 +734,6 @@ public class DateUtil {
 
 	/**
 	 * @Description: 比较两个日期的大小，若bigDate > smallDate 则返回true，否则返回false
-	 * @Param:
-	 * @Return:
-	 * @Author: qiufeng@hsyuntai.com
 	 * @Date: 2017/5/3 17:00
 	 */
 	public static boolean compareDate(Date bigDate, Date smallDate) {

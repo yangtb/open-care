@@ -186,12 +186,6 @@ public class ExcelUtils {
     }
     /**
      * @Description:通用excel生成方法有标题
-     * @Method:
-     * @Params:
-     * @ReturnType:
-     * @Author:xuty@hsyuntai.com
-     * @Date:2017/8/14
-     * @Copyright: 版权归 hsyuntai 所有
      */
     public static void createXlsFileHeader(HttpServletResponse response, String[] titles, List<List<String>> datas, int[] size,String header) {
 
@@ -253,11 +247,7 @@ public class ExcelUtils {
         }
     }
     /**
-     * @param
-     * @return
-     * @Description: 订制两个sheet, 由于只有两个sheet，就不通用了。自己定制。
-     * @Author: zhuhm@hsyuntai.com
-     * @Date: 2016/11/30 14:54
+     * 订制两个sheet, 由于只有两个sheet，就不通用了。自己定制。
      */
     public static void createXlsFile(HttpServletResponse response, String[] titles, String[] titles2, List<List<String>> datas, List<List<String>> datas2, int[] size, int[] size2) {
 
@@ -319,10 +309,9 @@ public class ExcelUtils {
 
 
     /**
-     * 毛泽
+     *
      * 功能1 *两个标题 第一个可以合并单格 第二个为正常标题
      * 功能2 *异常记录变红
-     * 支付总账单
      *
      * @param response
      * @param titles
@@ -418,8 +407,6 @@ public class ExcelUtils {
 
 
     /**
-     * 为udb开放平台设计
-     * maoze30070
      * 通用excel生成方法
      *
      * @param response
@@ -503,9 +490,6 @@ public class ExcelUtils {
 
     /**
      * @Description: 满意度调查改造-excel生成
-     * @Author: qintao@hsyuntai.com
-     * @Date: 2017/4/21 16:05
-     * @Copyright: 版权归 hsyuntai 所有
      */
     public static void createXlsFile(HttpServletResponse response,
                                      String[] titles, String[] titles2,
@@ -602,11 +586,7 @@ public class ExcelUtils {
     }
 
   /**
-   * @Description: 做批量导出的execl文件(财务的定时任务)
-   * @Return:
-   * @Param:
-   * @Author: maoze@hsyuntai.com
-   * @Date: 2017/11/27 10:22
+   * 做批量导出的execl文件(财务的定时任务)
    */
     public static byte[] BatchDownLoad(List<Map<String,Object>>  listmap) throws IOException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();

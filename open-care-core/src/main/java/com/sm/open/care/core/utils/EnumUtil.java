@@ -12,9 +12,11 @@ public class EnumUtil {
 
 	/**
 	 * 判断枚举值是否存在
-	 * 
-	 * @Author: liangqing@hsyuntai.com
-	 * @Date: 2016年8月5日 下午4:06:23
+	 * @param value
+	 * @param clazz
+	 * @param fieldName
+	 * @return
+	 * @throws Exception
 	 */
 	public static boolean contains(String value, Class<?> clazz, String fieldName) throws Exception {
 		if (StringUtils.isNotEmpty(value) && clazz.isEnum() && null != clazz.getEnumConstants()) {
