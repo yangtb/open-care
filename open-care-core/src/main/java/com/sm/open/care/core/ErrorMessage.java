@@ -71,5 +71,9 @@ public class ErrorMessage {
 	public static final String MESSAGE_PARAM_170007 = "访参数【{0}={1}】值字串不是有效的日期与时间(yyyy-MM-dd HH:mm:ss)格式";
 	/**接口访问参数验签不通过 */
 	public static final String MESSAGE_PARAM_170008 = "接口访问参数验签不通过";
-	
+
+	/** rpc异常 */
+	public static final String DEFAULT_RPC_INVOKE_EXCEPTION_MSG = "rpc服务异常";
+
+
 }

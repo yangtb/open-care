@@ -63,6 +63,10 @@ public class ResultObject implements Serializable {
         return new ResultObject(methodName, code, msg, dataType, data);
     }
 
+    public static final ResultObject createSuccess(String methodName, int dataType, Object data) {
+        return new ResultObject(methodName, SUCCESS_CODE, MSG_SUCCESS, dataType, data);
+    }
+
     public static final ResultObject create(String methodName, String code, String msg) {
         return new ResultObject(methodName, code, msg, 0, null);
     }

@@ -74,4 +74,8 @@ public class ErrorCode {
 	/**接口访问参数验签不通过 */
 	public static final String ERROR_PARAM_170008 = "170008"; // 接口访问参数验签不通过
 
+
+	/** rpc异常 */
+	public static final String DEFAULT_RPC_INVOKE_EXCEPTION = "rpc.invoke.exception";
+
 }
