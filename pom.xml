@@ -45,6 +45,7 @@
         -->
         <commons.email.version>1.4</commons.email.version>
         <jxl.version>2.6.12</jxl.version>
+        <freemarker.version>2.3.23</freemarker.version>
     </properties>
 
     <dependencyManagement>
@@ -184,6 +185,13 @@
                 <artifactId>jxl</artifactId>
                 <version>${jxl.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
