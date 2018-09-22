@@ -14,9 +14,6 @@ public enum Status {
 	PUBLISH("publish", "已发布"),
 	FREEZE("freeze", "冻结"),
 	REVOKE("revoke", "撤销"),
-	PENDING_PUB("pending_pub", "待提交"),
-	PENDING_CHECK("pending_check", "待审核"),
-	PENDING_UPDATE("pending_update", "待更新"),
 	EXPIRED("expired", "已过期");
 
 
