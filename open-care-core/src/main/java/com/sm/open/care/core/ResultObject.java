@@ -180,30 +180,8 @@ public class ResultObject implements Serializable {
         return response;
     }
 
-	/*
-	 * 
-	 * 
-	 * 正常结果： { "alipay_offline_provider_equipment_auth_remove_response":{
-	 * "code":"10000", "device_id":"1431921502386",
-	 * "merchant_pid":"2088101141598198", "msg":"Success" } } 
-	 */
-	/* 异常结果： {
-	 * "alipay_offline_provider_equipment_auth_remove_response":{
-	 * "code":"20000", "msg":"Service Currently Unavailable",
-	 * "sub_code":"isp.unknow-error", "sub_msg":"系统繁忙" } }
-	 */
 
     public static void main(String[] args) {
-//		Map<String, Object> dataMap = new HashMap<String, Object>();
-//		dataMap.put("device_id", "1431921502386");
-//		dataMap.put("merchant_pid", "2088101141598198");
-//		List<String> listData = new ArrayList<String>(10);
-//		listData.add("wxn");
-//		listData.add("yxm");
-//		ResultObject ro = ResultObject.create("alipay_offline_provider_equipment_auth_remove", "1000",dataMap);
-        //ResultObject ro = ResultObject.create("alipay_offline_provider_equipment_auth_remove", "1000","success", DATA_TYPE_LIST, listData);
-//		System.out.println("======= test data json ->" + com.alibaba.fastjson.JSON.toJSONString(ro.result()));
-//		ResultObject ro = ResultObject.create("alipay_offline_provider_equipment_auth_remove", "1000", "Service Currently Unavailable", "isp.unknow-error","系统繁忙" );
-//		System.out.println("======= test data json ->" + com.alibaba.fastjson.JSON.toJSONString(ro.result()));
+
     }
 }
