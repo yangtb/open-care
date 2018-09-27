@@ -778,7 +778,7 @@ public class DateUtil {
         if (StringUtils.isBlank(datestr)) {
             return null;
         }
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat(DEFAULT_FORMAT);
         Date date = strToDateNotDD(datestr);
         LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(date.getTime()), ZoneId.systemDefault());
         LocalDateTime endOfDay = localDateTime.with(TemporalAdjusters.lastDayOfMonth()).with(LocalTime.MAX);
@@ -797,7 +797,7 @@ public class DateUtil {
         if (StringUtils.isBlank(strDate)) {
             return null;
         }
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM");
+        SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_MONTH);
         ParsePosition pos = new ParsePosition(0);
         Date strtodate = formatter.parse(strDate, pos);
         return strtodate;
