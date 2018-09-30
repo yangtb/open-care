@@ -46,6 +46,7 @@
         <commons.email.version>1.4</commons.email.version>
         <jxl.version>2.6.12</jxl.version>
         <freemarker.version>2.3.23</freemarker.version>
+        <pinyin4j.vesion>2.5.0</pinyin4j.vesion>
     </properties>
 
     <dependencyManagement>
@@ -190,6 +191,12 @@
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.vesion}</version>
             </dependency>
 
         </dependencies>
