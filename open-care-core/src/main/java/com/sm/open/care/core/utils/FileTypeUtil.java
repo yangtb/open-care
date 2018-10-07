@@ -25,7 +25,7 @@ public class FileTypeUtil {
      * 文档类型
      */
     private static List<String> documentList = Arrays.asList(
-            "txt", "doc", "docx", "xls", "htm", "html", "jsp", "rtf", "wpd", "pdf", "ppt");
+            "txt", "doc", "docx", "xls", "xlsx", "htm", "html", "jsp", "rtf", "wpd", "pdf", "ppt");
 
     /**
      * 视频类型
