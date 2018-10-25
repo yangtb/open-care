@@ -98,7 +98,7 @@ public class LogTrace {
     }
 
     public String build() {
-        return traceId + ", " //+ appId + ", " + isvAppId + ", "
+        return traceId + ", "
                 + bizType + ", " + resultStatus + ", " + errorCode + ", "
                 + errorMsg + ", " + timeCost + "ms, " + (requestParams == null ? "(-)" : requestParams) + ", " + (responseResult == null ? "(-)" : responseResult);
     }
