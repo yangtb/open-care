@@ -116,11 +116,11 @@ public class HtmlMailUtil {
             // 发送  
             email.send();
             if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug(">>> " + subject + "发送成功，接受帐号：" + receiverEmail + "， 邮件内容： " + message);
+                LOGGER.debug(">>> " + subject + "发送成功，接受帐号：" + receiverEmail.toString() + "， 邮件内容： " + message);
             }
             return true;
         } catch (Exception e) {
-            LOGGER.error("【邮件发送异常】>>> " + subject + "发送失败，接受帐号：" + receiverEmail + "， 邮件标题： " + subject, e);
+            LOGGER.error("【邮件发送异常】>>> " + subject + "发送失败，接受帐号：" + receiverEmail.toString() + "， 邮件标题： " + subject, e);
             return false;
         }
     }

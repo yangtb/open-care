@@ -25,7 +25,7 @@
         <servlet.api.version>3.1.0</servlet.api.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.lang3.version>3.3.2</commons.lang3.version>
-        <httpclient.version>4.3.6</httpclient.version>
+        <httpclient.version>4.5.1</httpclient.version>
         <druid-version>1.0.9</druid-version>
         <mybatis.version>3.2.7</mybatis.version>
         <mybatis.spring.version>1.2.2</mybatis.spring.version>
@@ -34,7 +34,7 @@
         <alipay.common.tracer.version>1.0.20</alipay.common.tracer.version>
         <net.sf.cglib.version>2.1.3.alipay</net.sf.cglib.version>
         <commons.collections.version>3.2</commons.collections.version>
-        <fastjson.version>1.2.7.sec01</fastjson.version>
+        <fastjson.version>1.2.51</fastjson.version>
         <dubbo.version>2.5.3</dubbo.version>
         <log4j2.version>2.10.0</log4j2.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -45,6 +45,9 @@
         -->
         <commons.email.version>1.4</commons.email.version>
         <jxl.version>2.6.12</jxl.version>
+        <freemarker.version>2.3.23</freemarker.version>
+        <pinyin4j.vesion>2.5.0</pinyin4j.vesion>
+        <aliyun.sdk.oss.vesion>2.8.3</aliyun.sdk.oss.vesion>
     </properties>
 
     <dependencyManagement>
@@ -183,6 +186,24 @@
                 <groupId>net.sourceforge.jexcelapi</groupId>
                 <artifactId>jxl</artifactId>
                 <version>${jxl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.vesion}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.sdk.oss.vesion}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

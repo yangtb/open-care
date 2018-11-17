@@ -3,6 +3,7 @@ package com.sm.open.care.core.dubbo;
 import com.alibaba.dubbo.common.Constants;
 import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +22,9 @@ public class TraceFilter implements Filter {
     private static Logger LOGGER = LoggerFactory.getLogger(TraceFilter.class);
 
     /**
-     * dubbo存储traceid的key
+     * dubbo存储traceId的key
      */
-    private final String TRACE_KEY = "dubbo.traceid";
+    private final String TRACE_KEY = "dubbo.traceId";
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation)
@@ -41,29 +42,35 @@ public class TraceFilter implements Filter {
         String interfaceName = invoker.getInterface().getName();
         String methodName = invocation.getMethodName();
         InetSocketAddress remoteAddress = rpcContext.getRemoteAddress();
+        String params = JSON.toJSONString(invocation.getArguments());
         String remoteIpAndPort = remoteAddress.getHostString() + ":"
                 + remoteAddress.getPort();
         boolean isConsumer = rpcContext.isConsumerSide();
         if (isConsumer) {
-            LOGGER.info(String.format("Traceid[%s]: calling [%s] %s.%s", traceid,
-                    remoteIpAndPort, interfaceName, methodName));
+            LOGGER.info(String.format("traceId[%s]: calling [%s] %s.%s, params: %s", traceid,
+                    remoteIpAndPort, interfaceName, methodName, params));
         } else {
             // 服务提供者新开了线程，重新set
             TraceIdUtil.setLocalTraceid(rpcContext.getAttachment(TRACE_KEY));
-            LOGGER.info(String.format("Traceid[%s]: %s.%s  is called by [%s]",
-                    traceid, interfaceName, methodName, remoteIpAndPort));
+            LOGGER.info(String.format("traceId[%s]: %s.%s  is called by [%s], params: %s",
+                    traceid, interfaceName, methodName, remoteIpAndPort, params));
         }
+
+        // 开始时间
+        long start = System.currentTimeMillis();
 
         try {
             Result r = invoker.invoke(invocation);
             return r;
         } finally {
+            // 结束时间
+            long end = System.currentTimeMillis();
             if (isConsumer) {
-                LOGGER.info(String.format("Traceid[%s]: calling %s.%s finish !",
-                        traceid, interfaceName, methodName));
+                LOGGER.info(String.format("traceId[%s]: calling %s.%s finish, timeCost: [%s]ms !",
+                        traceid, interfaceName, methodName, end - start));
             } else {
-                LOGGER.info(String.format("Traceid[%s]: %s.%s is called finish !",
-                        traceid, interfaceName, methodName));
+                LOGGER.info(String.format("traceId[%s]: %s.%s is called finish, timeCost: [%s]ms !",
+                        traceid, interfaceName, methodName, end - start));
             }
             TraceIdUtil.clearLocalTraceid();
         }

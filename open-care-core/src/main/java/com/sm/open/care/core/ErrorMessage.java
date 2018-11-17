@@ -75,5 +75,6 @@ public class ErrorMessage {
 	/** rpc异常 */
 	public static final String DEFAULT_RPC_INVOKE_EXCEPTION_MSG = "rpc服务异常";
 
+	public static final String USER_AUTH_EXCEPTION_MSG = "只能操作当前用户所在机构数据";
 
 }

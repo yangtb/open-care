@@ -78,4 +78,6 @@ public class ErrorCode {
 	/** rpc异常 */
 	public static final String DEFAULT_RPC_INVOKE_EXCEPTION = "rpc.invoke.exception";
 
+	/** 权限不足 */
+	public static final String USER_AUTH_EXCEPTION = "user.auth.exception";
 }
