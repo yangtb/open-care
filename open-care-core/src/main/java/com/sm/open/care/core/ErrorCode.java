@@ -149,4 +149,14 @@ public class ErrorCode {
      * 前端统一tips
      */
     public static final String COMMON_TIPS_CODE = "common.tips";
+
+    /**
+     * 文件类型错误
+     */
+    public static final String FILE_TYPE_ERROR_CODE = "file.type.error";
+
+    /**
+     * 文件大小错误
+     */
+    public static final String FILE_SIZE_ERROR_CODE = "file.size.error";
 }
