@@ -3,6 +3,7 @@ package com.sm.open.care.core.utils;
 import org.apache.commons.mail.HtmlEmail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName: HtmlMailUtil
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
  * @Author yangtongbin
  * @Date 2018/9/16 16:08
  */
+@Component
 public class HtmlMailUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HtmlMailUtil.class);
