@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @ClassName: TraceFilter
@@ -26,6 +28,11 @@ public class TraceFilter implements Filter {
      */
     private final String TRACE_KEY = "dubbo.traceId";
 
+    /**
+     * 特殊接口方法名
+     */
+    private static List<String> NOT_PRINT_METHOD = Arrays.asList("updatePsw");
+
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation)
             throws RpcException {
@@ -42,9 +49,8 @@ public class TraceFilter implements Filter {
         String interfaceName = invoker.getInterface().getName();
         String methodName = invocation.getMethodName();
         InetSocketAddress remoteAddress = rpcContext.getRemoteAddress();
-        String params = JSON.toJSONString(invocation.getArguments());
-        String remoteIpAndPort = remoteAddress.getHostString() + ":"
-                + remoteAddress.getPort();
+        String params = NOT_PRINT_METHOD.contains(methodName) ? "not print params" : JSON.toJSONString(invocation.getArguments());
+        String remoteIpAndPort = remoteAddress.getHostString() + ":" + remoteAddress.getPort();
         boolean isConsumer = rpcContext.isConsumerSide();
         if (isConsumer) {
             LOGGER.info(String.format("traceId[%s]: calling [%s] %s.%s, params: %s", traceid,
@@ -60,8 +66,7 @@ public class TraceFilter implements Filter {
         long start = System.currentTimeMillis();
 
         try {
-            Result r = invoker.invoke(invocation);
-            return r;
+            return invoker.invoke(invocation);
         } finally {
             // 结束时间
             long end = System.currentTimeMillis();
