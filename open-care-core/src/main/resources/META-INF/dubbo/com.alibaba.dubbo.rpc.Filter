@@ -1,1 +1,1 @@
-traceFilter=com.sm.open.care.core.dubbo.TraceFilter
+##traceFilter=com.sm.open.care.core.dubbo.TraceFilter
