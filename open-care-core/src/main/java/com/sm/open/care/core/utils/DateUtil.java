@@ -416,6 +416,26 @@ public class DateUtil {
         return -1L;
     }
 
+    /**
+     * 两个日期相减获取s
+     *
+     * @param dateStr1
+     * @param dateStr2
+     * @return
+     */
+    public static Long subDateSecond(String dateStr1, String dateStr2) {
+        try {
+            if (StringUtils.isNotBlank(dateStr1) && StringUtils.isNotBlank(dateStr2)) {
+                Date date1 = parseDate(dateStr1, FORMAT_DATE_TIME);
+                Date date2 = parseDate(dateStr2, FORMAT_DATE_TIME);
+                return date1.getTime() - date2.getTime();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1L;
+    }
+
     public static boolean compareDate(String dateStr1, String dateStr2, String pattern) {
         pattern = StringUtils.isNotBlank(pattern) ? pattern : DEFAULT_FORMAT;
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
