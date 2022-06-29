@@ -43,7 +43,7 @@
         <logback.core.version>1.1.7</logback.core.version>
         <logback.classic.version>1.1.7</logback.classic.version>
         -->
-        <commons.email.version>1.4</commons.email.version>
+        <commons.email.version>1.5</commons.email.version>
         <jxl.version>2.6.12</jxl.version>
         <freemarker.version>2.3.23</freemarker.version>
         <pinyin4j.vesion>2.5.0</pinyin4j.vesion>
